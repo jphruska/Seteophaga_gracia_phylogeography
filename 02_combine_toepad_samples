@@ -1,0 +1,16 @@
+## two toepad samples from Belize were sequenced twice, so we need to combine them into one file per individual. This will be done using cat. 
+
+
+cat Setophaga_graciae_CM_S10255A_BEL_R1.fastq.gz Setophaga_graciae_CM_S10255B_BEL_R1.fastq.gz >> Setophaga_graciae_CM_S10255_BEL_R1.fastq.gz
+cat Setophaga_graciae_CM_S10255A_BEL_R2.fastq.gz Setophaga_graciae_CM_S10255B_BEL_R2.fastq.gz >> Setophaga_graciae_CM_S10255_BEL_R2.fastq.gz
+cat Setophaga_graciae_CM_S9116A_BEL_R1.fastq.gz Setophaga_graciae_CM_S9116B_BEL_R1.fastq.gz >> Setophaga_graciae_CM_S9116_BEL_R1.fastq.gz
+cat Setophaga_graciae_CM_S9116A_BEL_R2.fastq.gz Setophaga_graciae_CM_S9116B_BEL_R2.fastq.gz >> Setophaga_graciae_CM_S9116_BEL_R2.fastq.gz
+
+rm Setophaga_graciae_CM_S10255A_BEL_R1.fastq.gz
+rm Setophaga_graciae_CM_S10255B_BEL_R1.fastq.gz
+rm Setophaga_graciae_CM_S10255A_BEL_R2.fastq.gz
+rm Setophaga_graciae_CM_S10255B_BEL_R2.fastq.gz
+rm Setophaga_graciae_CM_S9116A_BEL_R1.fastq.gz
+rm Setophaga_graciae_CM_S9116B_BEL_R1.fastq.gz
+rm Setophaga_graciae_CM_S9116A_BEL_R2.fastq.gz
+rm Setophaga_graciae_CM_S9116B_BEL_R2.fastq.gz
