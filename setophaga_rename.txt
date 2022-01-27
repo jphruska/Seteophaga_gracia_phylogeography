@@ -4,7 +4,7 @@ I11_S11_L004_R1_001.fastq.gz	Setophaga_graciae_UWBM_114089_CHIH_R1.fastq.gz
 I11_S11_L004_R2_001.fastq.gz	Setophaga_graciae_UWBM_114089_CHIH_R2.fastq.gz
 I12_S12_L004_R1_001.fastq.gz	Setophaga_graciae_UWBM_114091_CHIH_R1.fastq.gz
 I12_S12_L004_R2_001.fastq.gz	Setophaga_graciae_UWBM_114091_CHIH_R2.fastq.gz
-I13_S13_L004_R1_001.fastq.gz 	Setophaga_graciae_UWBM_114128_CHIH_R1.fastq.gz
+I13_S13_L004_R1_001.fastq.gz	Setophaga_graciae_UWBM_114128_CHIH_R1.fastq.gz
 I13_S13_L004_R2_001.fastq.gz	Setophaga_graciae_UWBM_114128_CHIH_R2.fastq.gz
 I14_S14_L004_R1_001.fastq.gz	Setophaga_graciae_UWBM_77653_ARI_R1.fastq.gz
 I14_S14_L004_R2_001.fastq.gz	Setophaga_graciae_UWBM_77653_ARI_R2.fastq.gz
@@ -17,7 +17,7 @@ I17_S17_L004_R2_001.fastq.gz	Setophaga_graciae_UWBM_106760_NM_R2.fastq.gz
 I18_S18_L004_R1_001.fastq.gz	Setophaga_graciae_UWBM_111891_NM_R1.fastq.gz
 I18_S18_L004_R2_001.fastq.gz	Setophaga_graciae_UWBM_111891_NM_R2.fastq.gz
 I1_S1_L004_R1_001.fastq.gz	Setophaga_graciae_CM_S9116A_BEL_R1.fastq.gz
-I1_S1_L004_R2_001.fastq.gz 	Setophaga_graciae_CM_S9116A_BEL_R2.fastq.gz
+I1_S1_L004_R2_001.fastq.gz	Setophaga_graciae_CM_S9116A_BEL_R2.fastq.gz
 I2_S2_L004_R1_001.fastq.gz	Setophaga_graciae_CM_S10255A_BEL_R1.fastq.gz
 I2_S2_L004_R2_001.fastq.gz	Setophaga_graciae_CM_S10255A_BEL_R2.fastq.gz
 I35_S35_L004_R1_001.fastq.gz	Setophaga_graciae_CM_S9116B_BEL_R1.fastq.gz
