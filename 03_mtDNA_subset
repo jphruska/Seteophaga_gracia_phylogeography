@@ -1,0 +1,5 @@
+# Extract first 200,000 mtDNA reads for each Setophaga individual, for mtDNA genome assembly and ND2 and cytb haplotype networks. 
+
+# Use head to extract first 800,000 lines of each file (4 lines per read)
+
+for i in `ls *.fastq.gz` ; do head -n 800000 $i >> ${i}_800000.fastq.gz ; done
