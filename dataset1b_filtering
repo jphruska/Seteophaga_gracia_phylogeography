@@ -1,0 +1,14 @@
+# Filtering for preliminary admixture analyses. Removed all MSB individuals and UWBM 114089 due low sequencing depth ( > 4.5 coverage). 
+
+# In vcf directory, made directory called dataset1b. 
+
+# Filtered all vcfs in this directory using vcftools commmands in 01_dataset1b_filtering.sh
+
+# Moved all filtered vcfs to datset1b directory. 
+
+# Carried out the following commands to create on concatenated vcf (with headers). 
+
+grep "#" CM027507.1__a.g.vcf.dataset1b.vcf.recode.vcf >> setophaga_1b.vcf 
+
+for i in `ls *.recode.vcf` ; do grep -v "#" $i >> setophaga_1b.vcf ; done 
+
