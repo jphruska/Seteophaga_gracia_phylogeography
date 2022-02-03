@@ -1,0 +1,20 @@
+# Preparing files for admixture. 
+
+
+# make chromosome map for the vcfs
+grep -v "#" setophaga_1c.vcf | cut -f 1 | uniq | awk '{print $0"\t"$0}' > chrom_map.txt
+
+# run vcftools for vcf
+
+vcftools --vcf setophaga_1c.vcf  --plink --chrom-map chrom_map.txt --out setophaga
+
+# convert with plink
+
+/home/jmanthey/plink --file setophaga --recode12 --out setophaga2 --noweb
+
+# run admixture
+
+for K in 1 2 3 4 5; do /home/jmanthey/admixture --cv setophaga2.ped $K | tee log_setophaga_${K}.out; done 
+
+# check out files for lowest cross-validation error. 
+grep -h CV log_setophaga_*.out
