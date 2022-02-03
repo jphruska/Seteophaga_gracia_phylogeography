@@ -7,6 +7,6 @@
 #SBATCH --mem-per-cpu=8G
 
 for i in $( ls *.g.vcf); do
-vcftools --vcf $i --remove-indels --keep dataset1b.keep.txt --out $i.dataset4.vcf --minDP 7 --max-meanDP 40 --recode --max-missing 0.80;
+vcftools --vcf $i --remove-indels --keep dataset1b.keep.txt --out $i.dataset4.vcf --minDP 10 --max-meanDP 50 --recode --max-missing 0.80;
 done
 
