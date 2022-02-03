@@ -12,3 +12,10 @@ grep "#" CM027507.1__a.g.vcf.dataset1b.vcf.recode.vcf >> setophaga_1b.vcf
 
 for i in `ls *.recode.vcf` ; do grep -v "#" $i >> setophaga_1b.vcf ; done 
 
+# use bcftools to simplify the vcf files to reduce file size, complexity, and make them easier to work with
+
+for i in $( ls *.recode.vcf ); do
+j=${i%.recode.vcf}.simple.vcf;
+bcftools query -f '%POS\t%REF\t%ALT[\t%GT]\n' $i > $j;
+done
+
