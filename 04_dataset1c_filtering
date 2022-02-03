@@ -12,4 +12,8 @@ grep "#" CM027508.1__b.g.vcf.dataset1c.vcf.recode.vcf >> setophaga_1c.vcf
 
 for i in `ls *recode.vcf` ; do grep -v "#" $i >> setophaga_1c.vcf ; done 
 
-
+# simplify vcfs
+for i in $( ls *.recode.vcf ); do
+j=${i%.recode.vcf}.simple.vcf;
+bcftools query -f '%POS\t%REF\t%ALT[\t%GT]\n' $i > $j;
+done
