@@ -4,7 +4,7 @@
 
 # Filtered all vcfs in this directory using vcftools commmands in 01_dataset5_filtering.sh. These data are thinned every 10 kb. 
 
-# Moved all filtered vcfs to datset1c directory. 
+# Moved all filtered vcfs to dataset5 directory. 
 
 # use bcftools to simplify the vcf files to reduce file size, complexity, and make them easier to work with
 
