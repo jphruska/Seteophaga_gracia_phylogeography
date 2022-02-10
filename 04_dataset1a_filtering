@@ -1,0 +1,14 @@
+# Filtering for preliminary admixture analyses. Removed outgroup (Setophaga nigrescens individual). 
+
+# In vcf directory, made directory called dataset1a. 
+
+# Filtered all vcfs in this directory using vcftools commmands in 01_dataset1a_filtering.sh
+
+# Moved all filtered vcfs to datset1a directory. 
+
+# concatenate vcfs
+grep "#" CM027537.1__a.g.vcf.dataset1a.vcf.recode.vcf > setophaga_1a.vcf 
+
+for i in `ls *.recode.vcf` ; do grep -v "#" $i >> setophaga_1a.vcf ; done 
+
+# Process was stopped because too few SNPs (32) were recovered. 
