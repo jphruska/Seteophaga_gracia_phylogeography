@@ -1,4 +1,4 @@
-# Filtering for additional admixture analysis, with larger SNP dataset. Removed all MSB individuals and UWBM 114089 due low sequencing depth ( > 4.5 coverage).  
+# Filtering for additional admixture analysis, with larger SNP dataset (115,343 SNPs). Removed all MSB individuals and UWBM 114089 due low sequencing depth ( > 4.5 coverage).  
 
 # In vcf directory, made directory called dataset1e. 
 
