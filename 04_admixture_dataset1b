@@ -19,3 +19,9 @@ for K in 1 2 3 4 5; do /home/jmanthey/admixture --cv setophaga2.ped $K | tee log
 # check out files for lowest cross-validation error. 
 grep -h CV log_setophaga_*.out
 
+CV error (K=1): 0.52601
+CV error (K=2): 0.51379
+CV error (K=3): 0.56787
+CV error (K=4): 0.67342
+CV error (K=5): 0.77080
+
