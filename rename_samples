@@ -3,3 +3,31 @@
 while read -r name1 name2; do
 	mv $name1 $name2
 done < setophaga_rename.txt
+
+
+# combine .fastq.gz files of Belize samples (S10255 and S9116). 
+
+# S10255
+
+cat Setophaga_graciae_CM_S10255A_BEL_R1.fastq.gz Setophaga_graciae_CM_S10255B_BEL_R1.fastq.gz >> Setophaga_graciae_CM_S10255_BEL_R1.fastq.gz
+
+cat Setophaga_graciae_CM_S10255A_BEL_R2.fastq.gz Setophaga_graciae_CM_S10255B_BEL_R2.fastq.gz >> Setophaga_graciae_CM_S10255_BEL_R2.fastq.gz
+
+rm Setophaga_graciae_CM_S10255A_BEL_R1.fastq.gz 
+rm Setophaga_graciae_CM_S10255B_BEL_R1.fastq.gz
+rm Setophaga_graciae_CM_S10255A_BEL_R2.fastq.gz 
+rm Setophaga_graciae_CM_S10255B_BEL_R2.fastq.gz
+
+
+
+# S9116
+
+cat Setophaga_graciae_CM_S9116A_BEL_R1.fastq.gz Setophaga_graciae_CM_S9116B_BEL_R1.fastq.gz >> Setophaga_graciae_CM_S9116_BEL_R1.fastq.gz
+
+cat Setophaga_graciae_CM_S9116A_BEL_R2.fastq.gz Setophaga_graciae_CM_S9116B_BEL_R2.fastq.gz >> Setophaga_graciae_CM_S9116_BEL_R2.fastq.gz
+
+
+rm Setophaga_graciae_CM_S9116A_BEL_R1.fastq.gz
+rm Setophaga_graciae_CM_S9116B_BEL_R1.fastq.gz
+rm Setophaga_graciae_CM_S9116A_BEL_R2.fastq.gz
+rm Setophaga_graciae_CM_S9116B_BEL_R2.fastq.gz
