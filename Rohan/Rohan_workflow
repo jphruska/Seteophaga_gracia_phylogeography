@@ -4,7 +4,7 @@
 
 
 
-Step 1. Filter VCFs using vcftools (01_dataset6_filtering.sh). Only biallelic sites are retained, with no missing data. These filtered VCFs will be used to estimate TS:TV ratio (Transition/Transversion) ratio, which ROHan requires as input. After filtering, sex chromosome () will be removed, and the resulting VCFs will be concatenated into one file. Be sure to test this with different bin sizes, to ensure that TS:TV ratio is not sensitive to bin size. 
+Step 1. Filter VCFs using vcftools (01_dataset6_filtering.sh). Only biallelic sites are retained, with no missing data. These filtered VCFs will be used to estimate TS:TV ratio (Transition/Transversion) ratio, which ROHan requires as input. After filtering, sex chromosome (CM027535.1) will be removed, and the resulting VCFs will be concatenated into one file. Be sure to test this with different bin sizes, to ensure that TS:TV ratio is not sensitive to bin size. 
 
 
 Step 2. Use ROHan (on BAM files) to evaluate runs of homozygosity.
