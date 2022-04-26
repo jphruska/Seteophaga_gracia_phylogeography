@@ -38,7 +38,7 @@ save.image("setophaga_coverage.RData")
 
 load("setophaga_coverage.RData")
 
-par(mfrow=c(5,11))
+par(mfrow=c(7,8))
 for(a in 1:length(output2)) {
   plot(0:61, output2[[a]], pch=19, cex=0.1, xlab="Coverage", ylab="Proportion S.coronata genome", main=sample_names[a], ylim=c(0,0.3))
   poly.plot <- rbind(cbind(0:61, output2[[a]]), c(61, 0), c(0,0))
