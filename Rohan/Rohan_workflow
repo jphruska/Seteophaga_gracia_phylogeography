@@ -18,6 +18,9 @@ for i in `ls *.recode.vcf` ; do grep -v "#" $i >> setophaga_6.vcf ; done
 
 # use VCFTools to estimate TS:TV ratio. Start with a bin size of 1000 bp. Then do a bin size of 10000 bp. 
 
+Both estimates of the TsTV ratio were congruent (1.971). 
+
+
 Step 2. Use ROHan (on BAM files) to evaluate runs of homozygosity.
 
 
