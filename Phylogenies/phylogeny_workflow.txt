@@ -1,0 +1,14 @@
+## Generate thousands of "genes" from across the genome (non-overlapping 50 kbp windows) and estimated RAxML gene trees and ASTRAL species tree. Summarize best supported phylogenies using sumtrees.py. 
+
+
+Step 1. 
+
+## Filter concatenated VCF files. Make sure to remove sex chromosome after filtering and include Setophaga nigrescens individual. Also filter out low depth of coverage individuals. 
+
+
+
+When filtering, be sure to keep invariant and variant sites. 
+
+Step 2. 
+
+## Take filtered VCF files and generate FASTA files with custom R script. 
