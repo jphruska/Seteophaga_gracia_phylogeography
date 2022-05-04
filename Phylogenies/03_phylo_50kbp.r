@@ -2,7 +2,7 @@ options(scipen=999)
 	project_directory <- "/lustre/scratch/johruska/setophaga/03_vcf"
 	directory_name <- "tree_50kbp"
 	cluster <- "quanah"
-	max_number_jobs <- 400
+	max_number_jobs <- 1000
 	
 	# read in reference index
 	# filtered to only include genotyped chromosomes
