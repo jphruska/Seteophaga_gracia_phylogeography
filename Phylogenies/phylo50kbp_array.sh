@@ -34,7 +34,7 @@ for (( run=$START_NUM; run<=$END_NUM; run++ )); do
 
 	gunzip -cd /lustre/scratch/johruska/setophaga/03_vcf/combined_vcfs/dataset1_phylo/CM027507.1.g.vcf.phylo.filtered.vcf.recode.vcf.gz | grep "#" > /lustre/scratch/johruska/setophaga/03_vcf/combined_vcfs/dataset1_phylo/windows/${chrom_array}__${start_array}__${end_array}.recode.vcf
 
-	tabix /lustre/scratch/johruska/setophaga/03_vcf/combined_vcfs/dataset1_phylo/${chrom_array}.recode.vcf.gz ${chrom_array}:${start_array}-${end_array} >> /lustre/scratch/johruska/setophaga/03_vcf/combined_vcfs/dataset1_phylo/windows/${chrom_array}__${start_array}__${end_array}.recode.vcf
+	tabix /lustre/scratch/johruska/setophaga/03_vcf/combined_vcfs/dataset1_phylo/${chrom_array}.g.vcf.phylo.filtered.recode.vcf.gz ${chrom_array}:${start_array}-${end_array} >> /lustre/scratch/johruska/setophaga/03_vcf/combined_vcfs/dataset1_phylo/windows/${chrom_array}__${start_array}__${end_array}.recode.vcf
 
 	bcftools query -f '%POS\t%REF\t%ALT[\t%GT]\n' /lustre/scratch/johruska/setophaga/03_vcf/combined_vcfs/dataset1_phylo/windows/${chrom_array}__${start_array}__${end_array}.recode.vcf > /lustre/scratch/johruska/setophaga/03_vcf/combined_vcfs/dataset1_phylo/windows/${chrom_array}__${start_array}__${end_array}.simple.vcf
 
