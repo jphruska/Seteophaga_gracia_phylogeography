@@ -2,7 +2,7 @@
 
 Dataset 1 (all samples) 
 
-Step 1. Filter VCFs using VCFtools (XX filtering file here). Retain sex chromosome in analysis. Remove Setophaga nigrescens but keep all other samples. Thin to 10 kb. 
+Step 1. Filter VCFs using VCFtools (XX filtering file here). Remove sex chromosome (CM027535.1) in analysis. Remove Setophaga nigrescens but keep all other samples. Thin to 10 kb. 
 
 Step 2. Concatenate filtered VCFs into one VCF and run ADMIXTURE on that. Run K of 1 - 10, use cross validation error to obtain 'best' K and repeat this several times to evaluate reliability of results. 
 
@@ -10,7 +10,7 @@ Step 3. Repeat above steps, this time thinning to 50 kb instead.
 
 Dataset 2 (remove low coverage samples). 
 
-Step 1. Filter VCFs using VCFtools (XX filtering file here). Retain sex chromosome in analysis. Remove Setophaga nigrescens and low coverage ( > 6 x) samples. Thin to 10 kb. 
+Step 1. Filter VCFs using VCFtools (XX filtering file here). Remove sex chromosome (CM027535.1). Remove Setophaga nigrescens and low coverage ( > 6 x) samples. Thin to 10 kb. 
 
 Step 2. Concatenate filtered VCFs into one VCF and run ADMIXTURE on that. Run K of 1 - 10, use cross validation error to obtain 'best' K and repeat this several times to evaluate reliability of results. 
 
