@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --chdir=./
-#SBATCH --job-name=setophaga_dataset1_admixture_filtering
+#SBATCH --job-name=setophaga_dataset1a_admixture_filtering
 #SBATCH --partition quanah
 #SBATCH --nodes=1 --ntasks=12
 #SBATCH --time=48:00:00
