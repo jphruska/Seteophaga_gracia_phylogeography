@@ -7,5 +7,5 @@
 #SBATCH --mem-per-cpu=8G
 
 for i in $( ls *.g.vcf); do
-vcftools --vcf $i --remove-indels --keep dataset1b.keep.txt --out $i.dataset1_admix.vcf --maf 0.03 --minDP 5 --max-meanDP 50 --recode --minGQ 20 --minQ 20 --max-missing 1 --min-alleles 2 --max-alleles 2 --max-maf 0.49 --thin 5000;
+vcftools --vcf $i --remove-indels --keep dataset1b.keep.txt --out $i.dataset1a_admix.vcf --maf 0.03 --minDP 5 --max-meanDP 50 --recode --minGQ 20 --minQ 20 --max-missing 1 --min-alleles 2 --max-alleles 2 --max-maf 0.49 --thin 5000;
 done
