@@ -6,7 +6,7 @@ Step 1. Filter VCFs using VCFtools (01_dataset1_admixture_filtering.sh). Remove 
 
 Step 2. Concatenate filtered VCFs into one VCF and run ADMIXTURE with the resulting VCF as input. Run K of 1 - 10, use cross validation error to obtain 'best' K and repeat this several times to evaluate reliability of results. 
 
-Step 3. Repeat above steps, this time thinning to 50 kb instead. 
+Step 3. Repeat above steps, this time thinning to 50 kb instead (01_dataset1a_admixture_filtering.sh). 
 
 Dataset 2 (remove all low coverage samples, including Belizean samples). 
 
