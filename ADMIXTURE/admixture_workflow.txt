@@ -86,9 +86,9 @@ Step 7. Check cross validation error (output included below).
 grep -h CV log_setophaga_*.out
 
 
-## Dataset 2 () workflow:
+## Dataset 2 (85,390 SNPs) workflow:
 
-Step 1. Remove Z chromosome filtered VCF (CM027535.1a.g.vcf.dataset1_admix.vcf.recode.vcf). 
+Step 1. Remove Z chromosome filtered VCF (CM027535.2.g.vcf.dataset1_admix.vcf.recode.vcf). 
 
 Step 2. Combine VCFs into one. 
         
@@ -125,3 +125,44 @@ CV error (K=6): 0.80387
 CV error (K=7): 0.86240
 CV error (K=8): 0.98739
 CV error (K=9): 1.09031
+
+
+## Dataset 2a (18,389 SNPs) workflow:
+
+Step 1. Remove Z chromosome filtered VCF (CM027535.2a.g.vcf.dataset1_admix.vcf.recode.vcf). 
+
+Step 2. Combine VCFs into one. 
+        
+grep "#" CM027507.1.g.vcf.dataset2a_admix.vcf.recode.vcf > setophaga_2a_admix.vcf
+for i in $(ls *recode.vcf) ; do grep -v "#" $i >> setophaga_2a_admix.vcf; done
+
+Step 3. Make chromosome map for the vcfs
+
+grep -v "#" setophaga_2a_admix.vcf | cut -f 1 | uniq | awk '{print $0"\t"$0}' > chrom_map.txt
+        
+Step 4. Run vcftools for vcf
+
+vcftools --vcf setophaga_2a_admix.vcf  --plink --chrom-map chrom_map.txt --out setophaga
+
+Step 5. Convert with plink
+
+/home/jmanthey/plink --file setophaga --recode12 --out setophaga2 --noweb
+
+Step 6. Run admixture K 1 - 10. 
+
+for K in 1 2 3 4 5 6 7 8 9 10; do /home/jmanthey/admixture --cv setophaga2.ped $K | tee log_setophaga_${K}.out; done 
+
+Step 7. Check cross validation error (output included below). 
+
+grep -h CV log_setophaga_*.out
+
+CV error (K=10): 1.20583
+CV error (K=1): 0.52342
+CV error (K=2): 0.51660
+CV error (K=3): 0.57152
+CV error (K=4): 0.62719
+CV error (K=5): 0.69781
+CV error (K=6): 0.77023
+CV error (K=7): 0.89499
+CV error (K=8): 0.95627
+CV error (K=9): 1.07241
