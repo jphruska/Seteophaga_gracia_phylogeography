@@ -56,7 +56,7 @@ CV error (K=7): 0.86737
 CV error (K=8): 0.95967
 CV error (K=9): 1.07060
 
-## Dataset 1a () workflow:
+## Dataset 1a (16,048 SNPs) workflow:
 
 Step 1. Remove Z chromosome filtered VCF (CM027535.1a.g.vcf.dataset1_admix.vcf.recode.vcf). 
 
@@ -85,6 +85,16 @@ Step 7. Check cross validation error (output included below).
 
 grep -h CV log_setophaga_*.out
 
+CV error (K=10): 1.16483
+CV error (K=1): 0.53124
+CV error (K=2): 0.52013
+CV error (K=3): 0.57434
+CV error (K=4): 0.64611
+CV error (K=5): 0.77669
+CV error (K=6): 0.80576
+CV error (K=7): 0.88515
+CV error (K=8): 0.98037
+CV error (K=9): 1.06205
 
 ## Dataset 2 (85,390 SNPs) workflow:
 
