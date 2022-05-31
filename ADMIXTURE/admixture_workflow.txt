@@ -10,11 +10,11 @@ Step 3. Repeat above steps, this time thinning to 50 kb instead (01_dataset1a_ad
 
 Dataset 2 (remove all low coverage samples, including Belizean samples). 
 
-Step 1. Filter VCFs using VCFtools (XX filtering file here). Remove filtered sex chromosome (CM027535.1) VCF. Remove Setophaga nigrescens and all low coverage ( > 6 x) samples (including Belizean samples). Thin to 10 kb. 
+Step 1. Filter VCFs using VCFtools (01_dataset2_admixture_filtering.sh). Remove filtered sex chromosome (CM027535.1) VCF. Remove Setophaga nigrescens and all low coverage ( > 6 x) samples (including Belizean samples). Thin to 10 kb. 
 
 Step 2. Concatenate filtered VCFs into one VCF and run ADMIXTURE on that. Run K of 1 - 10, use cross validation error to obtain 'best' K and repeat this several times to evaluate reliability of results. 
 
-Step 3. Repeat above steps, this time thinning to 50 kb instead. 
+Step 3. Repeat above steps, this time thinning to 50 kb instead (01_dataset2a_admixture_filtering.sh). 
 
 ## Dataset 1 (52,496 SNPs) workflow:
 
