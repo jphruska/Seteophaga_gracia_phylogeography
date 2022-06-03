@@ -1,0 +1,21 @@
+## MSMC2 workflow to estimate effective population sizes through time of Setophaga graciae individuals ## 
+
+## Setup and considerations to keep in mind before starting analysis ## 
+
+1. Here, we will estimate Ne for individuals from across the range, including several individuals per population. To start, this will be done on a per-individual basis. 
+
+2. Individuals with less than 11x coverage will be removed. This includes all individuals from the Baiz et al. paper, the Belizean skin samples, low-coverage Chihuahuan individual (UWBM_114089) and one Guerrero individual (UWBM_112587). List of individuals used is provided in msmc_per_individual_list.txt. Lower average depth of coverage has been known to cause issues with PSMC (see Nadachowska paper on this), which is effectively what we are doing here when we run it on a per individual basis. 
+
+3. Sex chromosome will be excluded from this analysis. List of chromosomes used for this analysis (greater than 100 Mbp, same cutoff as the one carried out for the genotyping). List of chromosomes is provided in msmc_chromosomes.txt. 
+
+4. Create mappability masks of chromosomes in the reference genome. This process extracts k-mer subsequences from the genome (as read sequences) and aligns them back (with bwa) to get an estimate of how "mappable" different regions are. This provides the regions of the genome on which short sequencing reads can be uniquely mapped. This was done using Heng Li's SNPabl and the makeMappabilityMask.py script provided by msmc-tools.  
+
+4. Previous estimates of heterozygosity (per invdividual) will be used to calculate the scaled mutation rate (-m flag). Since ideally the mutation rate should be set to half of the heterozygosity data we will take our previous estimates of heterozygosity and divide it by two. Per individual estimates of heterozygosity, depth of coverage/per chromosome/per individual (which also needs to be provided when calling SNPs) and scaled mutation rates are required. Per individual scaled mutation rates are provided in msmc_individual_stats.txt. 
+
+5. Appropriate mutation rates and generation times need to be chosen, to scale the Ne estimates to real time and individuals. 
+
+# General Workflow
+
+1. Make mappability mask (per chromosome) for the reference genome. Have estimates of heterozygosity (per individual) in hand. 
+
+2. 
