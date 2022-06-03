@@ -18,4 +18,10 @@
 
 1. Make mappability mask (per chromosome) for the reference genome. Have estimates of heterozygosity (per individual) in hand. 
 
-2. 
+2. Run bamCaller.py to generate VCFs and bed files (masks). 
+
+3. Run generate_multihetsep.py to generate input files.
+
+4. Run MSMC per individual. 
+
+5. Run bootstraps per indiviudal. 
