@@ -1,1 +1,5 @@
 ## Workflow to carry out windowed analysis of diversity (e.g., Pi, Tajima's D) and differentiation (FST, dxy) within and between populations of Setophaga graciae.
+
+
+## Step 1. Filter and create VCF files. VCF files per population will be required. 
+
