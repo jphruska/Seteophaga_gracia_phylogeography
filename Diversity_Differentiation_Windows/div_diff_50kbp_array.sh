@@ -36,6 +36,6 @@ for (( run=$START_NUM; run<=$END_NUM; run++ )); do
 
 	bcftools query -f '%POS\t%REF\t%ALT[\t%GT]\n' /lustre/scratch/johruska/setophaga/03_vcf/combined_vcfs/dataset1_div_diff/windows/${chrom_array}__${start_array}__${end_array}.recode.vcf > /lustre/scratch/johruska/setophaga/03_vcf/combined_vcfs/dataset1_div_diff/windows/${chrom_array}__${start_array}__${end_array}.simple.vcf
 
-	Rscript calculate_windows.r /lustre/scratch/johruska/setophaga/03_vcf/combined_vcfs/dataset1_div_diff/windows/${chrom_array}__${start_array}__${end_array}.simple.vcf div_diff_phylo.txt
+	Rscript calculate_windows.r /lustre/scratch/johruska/setophaga/03_vcf/combined_vcfs/dataset1_div_diff/windows/${chrom_array}__${start_array}__${end_array}.simple.vcf div_diff_popmap.txt
 
 done
