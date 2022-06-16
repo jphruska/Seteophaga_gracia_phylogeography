@@ -1,0 +1,4 @@
+# Change to directory with diversity and differentiation output files (one per window).
+# Combine Tajima D output in one file.  
+
+for i in `ls *.txt` ; do grep "Tajima" $i >> tajima_d.txt ; done
