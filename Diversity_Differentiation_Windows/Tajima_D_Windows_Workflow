@@ -2,3 +2,7 @@
 # Combine Tajima D output in one file.  
 
 for i in `ls *.txt` ; do grep "Tajima" $i >> tajima_d.txt ; done
+
+# Combine Pi D output in one file. 
+
+for i in `ls *.txt` ; do grep "pi" $i >> pi.txt ; done
