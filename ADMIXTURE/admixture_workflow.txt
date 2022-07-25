@@ -225,3 +225,45 @@ CV error (K=6): 0.74022
 CV error (K=7): 0.81379
 CV error (K=8): 0.94357
 CV error (K=9): 1.13490
+
+
+## Dataset 3 (XX SNPs) workflow:
+
+Step 1. Remove Z chromosome filtered VCF (CM027535.3a.g.vcf.dataset1_admix.vcf.recode.vcf). 
+
+Step 2. Combine VCFs into one. 
+        
+grep "#" CM027507.1.g.vcf.dataset3a_admix.vcf.recode.vcf > setophaga_3a_admix.vcf
+for i in $(ls *recode.vcf) ; do grep -v "#" $i >> setophaga_3a_admix.vcf; done
+
+Step 3. Make chromosome map for the vcfs
+
+grep -v "#" setophaga_3a_admix.vcf | cut -f 1 | uniq | awk '{print $0"\t"$0}' > chrom_map.txt
+
+Step 4. Run vcftools for vcf
+
+vcftools --vcf setophaga_3a_admix.vcf  --plink --chrom-map chrom_map.txt --out setophaga
+
+Step 5. Convert with plink
+
+/home/jmanthey/plink --file setophaga --recode12 --out setophaga2 --noweb
+
+Step 6. Run admixture K 1 - 10. 
+
+for K in 1 2 3 4 5 6 7 8 9 10; do /home/jmanthey/admixture --cv setophaga2.ped $K | tee log_setophaga_${K}.out; done 
+
+Step 7. Check cross validation error (output included below). 
+
+grep -h CV log_setophaga_*.out
+
+CV error (K=10): 1.18364
+CV error (K=1): 0.51117
+CV error (K=2): 0.50464
+CV error (K=3): 0.55729
+CV error (K=4): 0.60687
+CV error (K=5): 0.74728
+CV error (K=6): 0.75171
+CV error (K=7): 0.83519
+CV error (K=8): 0.94416
+CV error (K=9): 1.04621
+
