@@ -1,0 +1,10 @@
+# Change to directory with diversity and differentiation output files (one per window).
+
+# Add header 
+
+grep 'pop1' CM027510.1__10250001__10300000__stats.txt > ../window_fst.txt
+
+# Combine Fst output in one file.  
+
+for i in `ls *.txt` ; do grep "Fst" $i >> ../window_fst.txt ; done
+
