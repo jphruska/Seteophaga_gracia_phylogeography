@@ -1,8 +1,8 @@
 # Change to directory with diversity and differentiation output files (one per window).
 # Combine Tajima D output in one file.  
+grep 'pop1' CM027510.1__10250001__10300000__stats.txt > ../tajima_d.txt
+for i in `ls *.txt` ; do grep "Tajima" $i >> ../tajima_d.txt ; done
 
-for i in `ls *.txt` ; do grep "Tajima" $i >> tajima_d.txt ; done
-
-# Combine Pi D output in one file. 
-
-for i in `ls *.txt` ; do grep "pi" $i >> pi.txt ; done
+# Combine Pi output in one file. 
+grep 'pop1' CM027510.1__10250001__10300000__stats.txt > ../pi.txt
+for i in `ls *.txt` ; do grep "pi" $i >> ../pi.txt ; done
