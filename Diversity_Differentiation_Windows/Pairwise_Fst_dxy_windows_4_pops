@@ -18,4 +18,4 @@ grep 'pop1' CM027510.1__10250001__10300000__stats.txt > ../window_dxy.txt
 
 # Combine dxy output in one file.  
 
-for i in `ls *.txt` ; do grep "dxy" $i >> ../window_dxy.txt ; done
+for i in `ls *.txt` ; do grep "Dxy" $i >> ../window_dxy.txt ; done
