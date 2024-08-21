@@ -1,2 +1,2 @@
-# Setophaga_graciae_phylogeography
+# Setophaga_graciae_genomic_phylogeography
 Range-wide genomic phylogeography of Setophaga graciae
