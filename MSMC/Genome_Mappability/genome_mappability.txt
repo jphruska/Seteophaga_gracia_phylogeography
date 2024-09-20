@@ -1,2 +1,0 @@
-## Scripts used to generate mappability mask (per chromosome) of reference genome ##
-
