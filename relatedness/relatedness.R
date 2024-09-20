@@ -42,8 +42,9 @@ for (i in 1:2756){
 
 relatedness_4 <- as.data.frame(cbind(id_1,id_2, as.numeric(relatedness3_sorted$RELATEDNESS_PHI)))
 
-relatedness_4$RELATEDNESS_PHI <- as.numeric(relatedness_4$RELATEDNESS_PHI)
 colnames(relatedness_4)[3] <- "RELATEDNESS_PHI"
+
+relatedness_4$RELATEDNESS_PHI <- as.numeric(relatedness_4$RELATEDNESS_PHI)
 
 # make heatmap
 
