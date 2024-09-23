@@ -10,7 +10,7 @@
 
 source activate recomb
 
-# used the Manacus mutation rate and generation time
+# used the Geospiza fortis mutation rate and generation time
 
 SEED="42"
 MU="3.44e-9"
