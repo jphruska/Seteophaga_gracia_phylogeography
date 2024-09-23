@@ -1,6 +1,6 @@
 # Admixture workflow (Figure 1D, S4) 
 
-1.  Filter .g.vcfs with 01_dataset15a_admixture_filtering.sh and 01_dataset15b_admixture_filtering.sh. 15a is 10kb thinned an 15b is 50kb thinned.
+1.  Filter .g.vcfs with 01_dataset15a_admixture_filtering.sh and 01_dataset15b_admixture_filtering.sh. 15a is 10kb thinned and 15b is 50kb thinned.
 2.  Run admixture (in interactive mode), with the following steps:
 
         Step A. Remove Z chromosome filtered VCF (CM027535.1.g.vcf.dataset15[a/b]_admix.vcf.recode.vcf). 
