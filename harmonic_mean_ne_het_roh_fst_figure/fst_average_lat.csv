@@ -1,0 +1,9 @@
+Comparison,FST,Average Lat (Pop 1),Average Lat (Pop 2),Average Lat (Pop 1 & Pop 2)
+Nicaragua_El_Salvador_Honduras,0.103,13.8225,14.71212667,14.26731333
+Belize_El_Salvador_Honduras,0.091,17.567668,14.71212667,16.13989733
+El_Salvador_Honduras_Chiapas,0.035,14.71212667,15.877,15.29456333
+Belize_Chiapas,0.092,17.567668,15.877,16.722334
+Chiapas_Guerrero,0.095,15.877,17.546,16.7115
+Guerrero_Durango,0.038,17.546,24.087,20.8165
+Durango_Chihuahua,0.001,24.087,29.651,26.869
+Chihuahua_NM_Ari_Nev_Col,0.005,29.651,30.29143,29.971215
