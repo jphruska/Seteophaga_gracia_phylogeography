@@ -20,7 +20,7 @@ Both estimates of the TsTV ratio were congruent (1.971).
 
 Step 2. Use ROHan (on BAM files) to evaluate runs of homozygosity. First do a preliminary run (02_run_rohan.sh), to get a feel for how the HMM is categorizing roh vs non-roh regions. 
 
-Step 3. Estimate 50kb windowed estimates of heterozygosity per individual. (Provide details on these estimates were calculated). 
+Step 3. Estimate 50kb windowed estimates of heterozygosity per individual. *Provide details on how these estimates were calculated*. 
 
 Step 4. Use per-individual heterozygosity estimates to obtain a reasonable rohmu estimate. This is the maximum mutation rate estimate tolerated for a region to be classified as a roh. This will be done with background_het_ROHs_rohmu.R. Here, the five lowest ranking individuals in average heterozygosity (see heterozygosity_per_individual section), for which the heterozygosity of the lowest 15 % quantile windows are plotted. An elbow in the histogram (ideally the distribution would be bimodal to make the demarcation clear) is used to separate non-roh vs roh windows, based on heterozygosity rates (Figure S6). 
 
