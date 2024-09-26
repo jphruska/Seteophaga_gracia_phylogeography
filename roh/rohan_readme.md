@@ -14,7 +14,7 @@ grep "#" CM027513.1.g.vcf.dataset6.vcf.recode.vcf >> setophaga_6.vcf
 
 for i in `ls *.recode.vcf` ; do grep -v "#" $i >> setophaga_6.vcf ; done
 
-c. run VCFTools to estimate TS:TV ratio. Start with a bin size of 1000 bp. Then do a bin size of 10000 bp
+c. run VCFTools to estimate TS:TV ratio. Start with a bin size of 1000 bp. Then do a bin size of 10000 bp. 
 
 Both estimates of the TsTV ratio were congruent (1.971). 
 
