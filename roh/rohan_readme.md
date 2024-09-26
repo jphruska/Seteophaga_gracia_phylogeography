@@ -1,4 +1,4 @@
-## Run ROHan to get estimates of runs of homozygosity per individual (Figure 3C, S6, S2).
+## Run ROHan to get estimates of runs of homozygosity per individual (Figures 3C, S6, S2).
 
 This dataset excludes those with low sequencing depth > 10 x, including the Belizean samples, which are derived from skin samples. These are consistent with the recommendations of the authors. 
 
