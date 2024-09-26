@@ -74,12 +74,3 @@ hist(log(het.lowest.ranking.individuals[[3]]$calculated_stat))
 hist(log(het.lowest.ranking.individuals[[4]]$calculated_stat))
 hist(log(het.lowest.ranking.individuals[[5]]$calculated_stat))
 
-
-# read in pi estimates (all individuals)
-
-pi <- read.table("pi_setophaga.txt", sep = "\t", header = T)
-
-hist(pi$calculated_stat)
-
-filtered.pi.hist.005 <- pi[pi$calculated_stat < quantile(pi$calculated_stat, 0.05, na.rm = TRUE),]
-abline(v=2e-4, col = "red")
