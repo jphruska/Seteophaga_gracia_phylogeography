@@ -1,6 +1,6 @@
 ## The objective of this script is to infer what might be the 'background' heterozygosity rate in the Setophaga graciae individuals, 
 ## in aims of using this information to set a more informed rohmu (heterozygosity rate tolerated in ROHs) parameter in ROHan. 
-## A lot of this inspired by a conversation started by Jordan Bemmels on the ROHan github repo. 
+## A lot of this inspired by a conversation started by Jordan Bemmels on the ROHan github repo (https://github.com/grenaud/ROHan/issues/12). 
 
 library(dplyr)
 ## read in estimates of heterozygosity (previously estimated)
