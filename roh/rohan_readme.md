@@ -4,17 +4,17 @@ This dataset excludes those with low sequencing depth > 10 x, including the Beli
 
 Step 1. Filter .g.vcfs using vcftools (01_dataset6_filtering.sh). Only biallelic sites are retained, with no missing data. These filtered VCFs will be used to estimate TS:TV ratio (Transition/Transversion) ratio, which ROHan requires as input. After filtering, sex chromosome (CM027535.1) will be removed, and the resulting VCFs will be concatenated into one file. Be sure to test this with different bin sizes, to ensure that TS:TV ratio is not sensitive to bin size. 
 
-a. *removing sex chromosome*
+a. remove sex chromosome
 
 rm CM027535.1.g.vcf.dataset6.vcf.recode.vcf
 
-b. *concatenating VCF files* 
+b. concatenate VCF files
 
 grep "#" CM027513.1.g.vcf.dataset6.vcf.recode.vcf >> setophaga_6.vcf
 
 for i in `ls *.recode.vcf` ; do grep -v "#" $i >> setophaga_6.vcf ; done
 
-c. *use VCFTools to estimate TS:TV ratio. Start with a bin size of 1000 bp. Then do a bin size of 10000 bp*
+c. run VCFTools to estimate TS:TV ratio. Start with a bin size of 1000 bp. Then do a bin size of 10000 bp
 
 Both estimates of the TsTV ratio were congruent (1.971). 
 
