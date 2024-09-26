@@ -1,6 +1,6 @@
 ## Run ROHan to get estimates of runs of homozygosity per individual (Figure 3C, S6, S2).
 
-## This dataset excludes those with low sequencing depth > 10 x, including the Belizean samples, which are derived from skin samples. These are consistent with the recommendations of the authors. 
+This dataset excludes those with low sequencing depth > 10 x, including the Belizean samples, which are derived from skin samples. These are consistent with the recommendations of the authors. 
 
 Step 1. Filter .g.vcfs using vcftools (01_dataset6_filtering.sh). Only biallelic sites are retained, with no missing data. These filtered VCFs will be used to estimate TS:TV ratio (Transition/Transversion) ratio, which ROHan requires as input. After filtering, sex chromosome (CM027535.1) will be removed, and the resulting VCFs will be concatenated into one file. Be sure to test this with different bin sizes, to ensure that TS:TV ratio is not sensitive to bin size. 
 
