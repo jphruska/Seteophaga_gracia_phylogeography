@@ -14,7 +14,7 @@ Step 1. Filter .g.vcfs using vcftools (01_dataset6_filtering.sh). Only biallelic
 
     for i in `ls *.recode.vcf` ; do grep -v "#" $i >> setophaga_6.vcf ; done
 
-    C. run vcftools to estimate TS:TV ratio. Start with a bin size of 1000 bp. Then do a bin size of 10000 bp. 
+    C. run vcftools (01_tstv_ratio_[1000/10000].sh to estimate TS:TV ratio. Start with a bin size of 1000 bp. Then do a bin size of 10000        bp. 
   
     Both estimates of the TsTV ratio were congruent (1.971). 
 
