@@ -9,6 +9,8 @@
 
 module load intel R
 
+module load intel bcftools 
+
 # Set the number of runs that each SLURM task should do
 PER_TASK=19
 
@@ -32,11 +34,11 @@ for (( run=$START_NUM; run<=$END_NUM; run++ )); do
 
 	gunzip -cd /lustre/scratch/johruska/setophaga/03_vcf/combined_vcfs/dataset17_div_diff/CM027507.1.g.vcf.dataset17.diff.div.filtered.vcf.recode.vcf.gz | grep "#" > /lustre/scratch/johruska/setophaga/03_vcf/combined_vcfs/dataset17_div_diff/windows/${chrom_array}__${start_array}__${end_array}.recode.vcf
 
-	tabix /lustre/scratch/johruska/setophaga/03_vcf/combined_vcfs/dataset17_div_diff/${chrom_array}.recode.vcf.gz ${chrom_array}:${start_array}-${end_array} >> /lustre/scratch/johruska/setophaga/03_vcf/combined_vcfs/dataset17_div_diff/windows/${chrom_array}__${start_array}__${end_array}.recode.vcf
+	tabix /lustre/scratch/johruska/setophaga/03_vcf/combined_vcfs/dataset17_div_diff/${chrom_array}.g.vcf.dataset17.diff.div.filtered.vcf.recode.vcf.gz ${chrom_array}:${start_array}-${end_array} >> /lustre/scratch/johruska/setophaga/03_vcf/combined_vcfs/dataset17_div_diff/windows/${chrom_array}__${start_array}__${end_array}.recode.vcf
 
 	bcftools query -f '%POS\t%REF\t%ALT[\t%GT]\n' /lustre/scratch/johruska/setophaga/03_vcf/combined_vcfs/dataset17_div_diff/windows/${chrom_array}__${start_array}__${end_array}.recode.vcf > /lustre/scratch/johruska/setophaga/03_vcf/combined_vcfs/dataset17_div_diff/windows/${chrom_array}__${start_array}__${end_array}.simple.vcf
 
-	Rscript calculate_windows.r /lustre/scratch/johruska/setophaga/03_vcf/combined_vcfs/dataset17_div_diff/windows/${chrom_array}__${start_array}__${end_array}.simple.vcf popmap_phylo.txt
+	Rscript calculate_windows.r /lustre/scratch/johruska/setophaga/03_vcf/combined_vcfs/dataset17_div_diff/windows/${chrom_array}__${start_array}__${end_array}.simple.vcf div_diff_popmap.txt
 
 	rm /lustre/scratch/johruska/setophaga/03_vcf/combined_vcfs/dataset17_div_diff/windows/${chrom_array}__${start_array}__${end_array}.recode.vcf
 	rm /lustre/scratch/johruska/setophaga/03_vcf/combined_vcfs/dataset17_div_diff/windows/${chrom_array}__${start_array}__${end_array}.simple.vcf
