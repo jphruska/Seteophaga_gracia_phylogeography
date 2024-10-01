@@ -1,4 +1,4 @@
-# Heterozygosity estimates per individual 
+# Heterozygosity estimates per individual (Figure 3B)
 
 1. Filter .g.vcf (including Z chromosome) with 01_dataset4_filtering.sh. This is done for a reduced dataset of 47 individuals.
 2. Run 01_heterozygosity.sh, which will call calc_heterozygosity.R. This script will calculate the total number of sites (while excluding missing data) and the number of heterozygous sites.
