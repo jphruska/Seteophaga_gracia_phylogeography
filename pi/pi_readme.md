@@ -1,4 +1,4 @@
-## Per-population estimates of pi (Figures 4, 5, 6, and S7, S8, and S9).
+## Per-population estimates of pi (Data for Figures 4, 5, 6, and S7, S8, and S9).
 
 This workflow will generate windowed per-population pi values, using equation 2 from Carlson et al. (2005). See manuscript for reference. This workflow shares many similarities with the windowed Dxy and Fst workflows in this repository. 
 
