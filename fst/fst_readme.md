@@ -1,4 +1,4 @@
-## Pairwise windowed Fst (Data for Figures 4, 5, 6, and S10, S11, and S15).
+## Pairwise windowed Fst (Data for Figures 4, 5, 6, and S10, S11, S15).
 
 This workflow will generate windowed pairwise Fst values, using the Reich et al. (2009) estimator for small population sizes. See manuscript for reference. This workflow shares many similarities with the windowed Dxy and pi workflows in this repository. 
 
