@@ -1,8 +1,8 @@
-## Per-population estimates of pi (Figure 4, 5, 6, and S7, S8, and S9).
+## Per-population estimates of pi (Figures 4, 5, 6, and S7, S8, and S9).
 
 This workflow will generate windowed per-population pi values, using equation 2 from Carlson et al. (2005). See manuscript for reference. This workflow shares many similarities with the windowed Dxy and Fst workflows in this repository. 
 
-Step 1. Run 01_dataset17_div_dff_dataset17.sh to filter VCFs. 
+Step 1. Run 01_dataset17_div_dff_dataset17.sh to filter VCFs. All chromosomes, including the Z. 
 
 Step 2. Bgzip and index positions with tabix (02_bgzip_tabix.sh). 
 
