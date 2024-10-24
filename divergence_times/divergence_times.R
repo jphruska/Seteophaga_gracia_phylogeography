@@ -1,6 +1,6 @@
 ## This script will estimate divergence times between Setophaga populations, using pairwise Dxy values and ##
 ## per-population nucleotide diversity. The two equations will calculate divergence times in calendar years ##
-## and coalescent units. This follows the methodology of Chase et al. 2023, and the equations therein are from ##
+## and coalescent units. This follows the methodology of Chase et al. 2021, and the equations therein are from ##
 ## Wiuf et al. 2004. ## 
 
 
