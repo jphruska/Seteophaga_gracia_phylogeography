@@ -218,7 +218,7 @@ pairwise.dxy <- list(dxy_southwest_usa_chihuahua$calculated_stat, dxy_southwest_
                      dxy_guerrero_nicaragua$calculated_stat, dxy_el_salvador_honduras_chiapas$calculated_stat, 
                      dxy_nicaragua_chiapas$calculated_stat, dxy_nicaragua_el_salvador_honduras$calculated_stat)
 
-## store all pairwise dxys in a list
+## create vector of pairwise dxy comparison names
 
 pairwise.dxy.names <- c("dxy_southwest_usa_chihuahua", "dxy_southwest_usa_durango", "dxy_southwest_usa_guerrero", 
                                          "dxy_southwest_usa_chiapas", "dxy_southwest_usa_el_salvador_honduras", "dxy_southwest_usa_nicaragua", 
@@ -230,7 +230,7 @@ pairwise.dxy.names <- c("dxy_southwest_usa_chihuahua", "dxy_southwest_usa_durang
 
 
 
-## store all pis in a list
+## make vector of pi names 
 
 pairwise.pi.names <- c("pi_southwest_usa", "pi_chihuahua", "pi_durango", "pi_guerrero", "pi_chiapas",
                        "pi_el_salvador_honduras", "pi_nicaragua")
@@ -262,7 +262,7 @@ divergence_time <- function (dxy, pi_1, pi_2, muta) {
   
 # tau calculations 
 
-# for loop through list of dxy comparisons (do comparisons with southwest_usa population) and calculate tau 
+# for loop through list of dxy comparisons (do comparisons with southwest_usa listed as the first population) and calculate tau 
 
 tau.1 <- c()
 
@@ -271,7 +271,7 @@ for (i in 1:6) {
     print(i)
 }
 
-# for loop through list of dxy comparisons (do comparisons with chihuahua population) and calculate tau 
+# for loop through list of dxy comparisons (do comparisons with chihuahua listed as the first population) and calculate tau 
 
 tau.2 <- c()
 
@@ -291,7 +291,7 @@ for (i in 7:11) {
 }
 
 
-# for loop through list of dxy comparisons (do comparisons with durango population) and calculate tau 
+# for loop through list of dxy comparisons (do comparisons with durango listed as the first population) and calculate tau 
 
 tau.3 <- c()
 
@@ -309,7 +309,7 @@ for (i in 12:15) {
 }
 
 
-# for loop through list of dxy comparisons (do comparisons with guererro population) and calculate tau 
+# for loop through list of dxy comparisons (do comparisons with guererro listed as the first population) and calculate tau 
 
 tau.4 <- c()
 
@@ -324,7 +324,7 @@ for (i in 16:18) {
   print(i)
 }
 
-# for loop through list of dxy comparisons (do el_salvador_honduras-chiapas comparison) and calculate tau 
+# for loop through list of dxy comparisons (do comparison with el_salvador_honduras-chiapas listed as the first population) and calculate tau 
 
 tau.5 <- c()
 
@@ -334,7 +334,7 @@ for (i in 19) {
 }
 
 
-# for loop through list of dxy comparisons (do comparisons with nicaragua) and calculate tau 
+# for loop through list of dxy comparisons (do comparisons with nicaragua listed as the first population) and calculate tau 
 
 tau.6 <- c()
 
@@ -349,7 +349,7 @@ for (i in 20:21) {
   
 # divergence_time calculations 
 
-# for loop through list of dxy comparisons (do comparisons with southwest_usa population) and calculate divergence_time 
+# for loop through list of dxy comparisons (do comparisons with southwest_usa listed as the first population) and calculate divergence_time 
 
 divergence_time.1 <- c()
 
@@ -358,7 +358,7 @@ for (i in 1:6) {
   print(i)
 }
 
-# for loop through list of dxy comparisons (do comparisons with chihuahua population) and calculate divergence_time 
+# for loop through list of dxy comparisons (do comparisons with chihuahua listed as the first population) and calculate divergence_time 
 
 divergence_time.2 <- c()
 
@@ -378,7 +378,7 @@ for (i in 7:11) {
 }
 
 
-# for loop through list of dxy comparisons (do comparisons with durango population) and calculate divergence_time 
+# for loop through list of dxy comparisons (do comparisons with durango listed as the first population) and calculate divergence_time 
 
 divergence_time.3 <- c()
 
@@ -396,7 +396,7 @@ for (i in 12:15) {
 }
 
 
-# for loop through list of dxy comparisons (do comparisons with guererro population) and calculate divergence_time 
+# for loop through list of dxy comparisons (do comparisons with guererro listed as the first population) and calculate divergence_time 
 
 divergence_time.4 <- c()
 
@@ -411,7 +411,7 @@ for (i in 16:18) {
   print(i)
 }
 
-# for loop through list of dxy comparisons (do el_salvador_honduras-chiapas comparison) and calculate divergence_time 
+# for loop through list of dxy comparisons (do comparison with el_salvador_honduras-chiapas listed as the first population) and calculate divergence_time 
 
 divergence_time.5 <- c()
 
@@ -421,7 +421,7 @@ for (i in 19) {
 }
 
 
-# for loop through list of dxy comparisons (do comparisons with nicaragua) and calculate divergence_time 
+# for loop through list of dxy comparisons (do comparisons with nicaragua listed as the first population) and calculate divergence_time 
 
 divergence_time.6 <- c()
 
